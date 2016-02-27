@@ -7,10 +7,46 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.landtanin.spaceship.MainActivity">
+    tools:context="com.example.landtanin.spaceship.MainActivity"
+    android:background="@drawable/space_bg7">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SPACE SHIP"
+            android:id="@+id/gameNameText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:textSize="50dp" />
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="35dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/playerName"
+            android:layout_gravity="center_horizontal"
+            android:hint="PILOT:"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="40dp"
+            android:background="#41fafff8"
+            android:singleLine="false"
+            android:textStyle="normal"
+            android:selectAllOnFocus="false" />
+
+        <Button
+            android:layout_width="@dimen/joinButtonWidth"
+            android:layout_height="@dimen/joinButtonHeight"
+            android:text="JOIN!"
+            android:id="@+id/joinButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="30dp"
+            android:textSize="30dp"
+            android:background="#41fafff8" />
+    </LinearLayout>
 </RelativeLayout>
