@@ -14,6 +14,7 @@
         <item>Ship 10</item>
     </string-array>
 
+    <!--
     <string-array name="Descriptions">
         <item>Description 1</item>
         <item>Description 2</item>
@@ -27,5 +28,6 @@
         <item>Description 10</item>
 
     </string-array>
+    -->
 
 </resources>
