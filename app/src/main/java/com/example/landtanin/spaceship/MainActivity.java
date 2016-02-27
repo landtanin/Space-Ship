@@ -1,5 +1,6 @@
 package com.example.landtanin.spaceship;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -50,12 +51,26 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"PLEASE ENTER PILOT NAME",Toast.LENGTH_SHORT).show();
 
                 }
+                else {
+
+                    IntentToGameControl();
+
+                }
 
 
             }
 
 
+
         });
+
+    }
+
+    private void IntentToGameControl() {
+
+        Intent objIntent = new Intent(MainActivity.this, GameControlActivity.class);
+        startActivity(objIntent);
+        finish();
 
     }
 
