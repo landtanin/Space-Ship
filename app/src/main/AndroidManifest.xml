@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameControlActivity"></activity>
+        <activity android:name=".GameControlActivity" />
+        <activity android:name=".ChooseShip"></activity>
     </application>
 
 </manifest>
