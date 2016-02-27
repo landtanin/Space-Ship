@@ -33,11 +33,11 @@ public class ChooseShip extends AppCompatActivity {
 
         shipImages = new int[]{
 
-                R.drawable.falcon_topview,R.drawable.falcon_topview,
-                R.drawable.falcon_topview,R.drawable.falcon_topview,
-                R.drawable.falcon_topview,R.drawable.falcon_topview,
-                R.drawable.falcon_topview,R.drawable.falcon_topview,
-                R.drawable.falcon_topview,R.drawable.falcon_topview
+                R.drawable.ship1,R.drawable.ship2,
+                R.drawable.ship3,R.drawable.ship4,
+                R.drawable.ship5,R.drawable.ship6,
+                R.drawable.ship7,R.drawable.ship8,
+                R.drawable.ship9,R.drawable.ship10
 
         };
 
