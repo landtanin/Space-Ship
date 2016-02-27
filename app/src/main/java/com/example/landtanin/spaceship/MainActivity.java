@@ -1,7 +1,6 @@
 package com.example.landtanin.spaceship;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -41,14 +40,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //Sound Effect
-                MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.phonton1);
+                //MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.);
+                //joinButtonMediaPlayer.start();
 
                 //check zero
                 //checkZero()
 
-                if(playerName.equals("")){
+                String strPlayer = playerName.getText().toString().trim();
 
-                    Toast.makeText(MainActivity.this,"PLEASE ENTER PILOT NAME",Toast.LENGTH_SHORT).show();
+                if(strPlayer.equals("")){
+
+                    Toast.makeText(MainActivity.this,"PLEASE ENTER PILOT NAME", Toast.LENGTH_SHORT).show();
 
                 }
                 else {
