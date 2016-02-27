@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Space Ship</string>
+
+    <string-array name="Titles">
+        <item>Ship 1</item>
+        <item>Ship 2</item>
+        <item>Ship 3</item>
+        <item>Ship 4</item>
+        <item>Ship 5</item>
+        <item>Ship 6</item>
+        <item>Ship 7</item>
+        <item>Ship 8</item>
+        <item>Ship 9</item>
+        <item>Ship 10</item>
+    </string-array>
+
+    <string-array name="Descriptions">
+        <item>Description 1</item>
+        <item>Description 2</item>
+        <item>Description 3</item>
+        <item>Description 4</item>
+        <item>Description 5</item>
+        <item>Description 6</item>
+        <item>Description 7</item>
+        <item>Description 8</item>
+        <item>Description 9</item>
+        <item>Description 10</item>
+
+    </string-array>
+
 </resources>

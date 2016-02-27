@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.landtanin.spaceship.MainActivity"
     android:background="@drawable/space_bg7">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.375"></FrameLayout>
-
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
-        android:gravity="center_horizontal"
-        android:layout_weight="0.5">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonLeft"
-            android:layout_gravity="center_horizontal|bottom"
-            android:src="@drawable/arrow_left_img"
-            android:background="#28fafff8"
-            android:padding="40dp"
-            android:layout_margin="10dp"
-            android:layout_weight="0.5" />
+            android:text="CHOOSE YOUR SHIP"
+            android:id="@+id/chooseShipText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:textSize="40dp" />
 
-        <ImageButton
-            android:layout_width="match_parent"
+        <ListView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonRight"
-            android:layout_gravity="center_horizontal|bottom"
-            android:background="#28fafff8"
-            android:src="@drawable/arrowright_img"
-            android:padding="40dp"
-            android:layout_margin="10dp"
-            android:layout_weight="0.5" />
+            android:id="@+id/shiplistView" />
 
     </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
