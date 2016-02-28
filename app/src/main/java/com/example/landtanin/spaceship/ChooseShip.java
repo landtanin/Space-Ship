@@ -42,8 +42,8 @@ public class ChooseShip extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
-                joinButtonMediaPlayer.start();
+                MediaPlayer nextButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
+                nextButtonMediaPlayer.start();
 
                 if (shipCount<10) {
 
@@ -69,8 +69,8 @@ public class ChooseShip extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
-                joinButtonMediaPlayer.start();
+                MediaPlayer previousButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
+                previousButtonMediaPlayer.start();
 
                 if (shipCount>=0) {
 
@@ -96,8 +96,8 @@ public class ChooseShip extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.phonton1);
-                joinButtonMediaPlayer.start();
+                MediaPlayer shipSelectButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.phonton1);
+                shipSelectButtonMediaPlayer.start();
 
                 Intent objIntent = new Intent(ChooseShip.this, GameControlActivity.class);
                 startActivity(objIntent);
