@@ -15,7 +15,7 @@ public class ChooseShip extends AppCompatActivity {
     private int[] shipImages;
     private ImageView shipView;
     private Button previousButton, nextButton, shipSelectButton;
-    private int shipCount; // form 0-9
+    private int shipCount=0; // form 0-9
     private TextView shipNo;
     private String[] shipName;
     private String userName;
@@ -40,7 +40,7 @@ public class ChooseShip extends AppCompatActivity {
 
     private void changePicButton() {
 
-        shipCount = 1;
+
 
         userName = getIntent().getExtras().getString("user");
 
@@ -50,6 +50,8 @@ public class ChooseShip extends AppCompatActivity {
 
                 MediaPlayer nextButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
                 nextButtonMediaPlayer.start();
+
+                shipCount++;
 
                 if (shipCount<10) {
 
@@ -65,7 +67,7 @@ public class ChooseShip extends AppCompatActivity {
                 }
 
 
-                shipCount++;
+
 
             }
 
@@ -80,6 +82,8 @@ public class ChooseShip extends AppCompatActivity {
                 MediaPlayer previousButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
                 previousButtonMediaPlayer.start();
 
+                shipCount--;
+
                 if (shipCount>=0) {
 
                     shipView.setImageResource(shipImages[shipCount]);
@@ -92,8 +96,6 @@ public class ChooseShip extends AppCompatActivity {
                     shipNo.setText(shipName[shipCount]);
 
                 }
-
-                shipCount--;
 
 
             }

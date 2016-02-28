@@ -44,7 +44,7 @@ public class GameControlActivity extends AppCompatActivity {
 
         };
 
-        userShip.setImageResource(shipImages[shipCount+1]);
+        userShip.setImageResource(shipImages[shipCount]);
 
     }
 
