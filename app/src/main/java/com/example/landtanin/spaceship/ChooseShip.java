@@ -29,6 +29,8 @@ public class ChooseShip extends AppCompatActivity {
 
         resources();
 
+
+
         myAdapter adapter = new myAdapter(this, shipName, shipImages);
         shipListView.setAdapter(adapter);
 
@@ -85,4 +87,6 @@ class myAdapter extends ArrayAdapter<String> {
         return row;
 
     }
+
+
 }

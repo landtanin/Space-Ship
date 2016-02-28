@@ -21,8 +21,8 @@
             android:text="CHOOSE YOUR SHIP"
             android:id="@+id/chooseShipText"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:textSize="40dp" />
+            android:textSize="40dp"
+            android:textColor="#ffffff" />
 
         <ListView
             android:layout_width="wrap_content"
