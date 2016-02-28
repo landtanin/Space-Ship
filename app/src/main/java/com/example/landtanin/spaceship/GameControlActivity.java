@@ -25,7 +25,9 @@ public class GameControlActivity extends AppCompatActivity {
 
         userName = getIntent().getExtras().getString("userToShow");
 
-        userShow.setText("PILOT : " + userName);
+        String showString = "PILOT : " + userName;
+
+        userShow.setText(showString);
 
     }
 
