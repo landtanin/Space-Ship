@@ -22,21 +22,36 @@
             android:id="@+id/chooseShipText"
             android:layout_gravity="center_horizontal"
             android:textSize="35dp"
-            android:textColor="#ffffff"
-            android:layout_marginBottom="20dp" />
+            android:textColor="#ffffff" />
 
-        <ImageView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/shipView"
-            android:layout_weight="0.2"
-            android:src="@drawable/ship1" />
+            android:layout_weight="0.2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/shipView"
+                android:layout_weight="0.2"
+                android:src="@drawable/ship1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ship 1"
+                android:id="@+id/shipNameText"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp"
+                android:textColor="#ffffff" />
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.5">
+            android:layout_weight="0.6">
 
             <Button
                 android:layout_width="match_parent"

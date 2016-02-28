@@ -8,15 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ChooseShip extends AppCompatActivity {
 
-    int[] shipImages;
+    private int[] shipImages;
     private ImageView shipView;
     private Button previousButton, nextButton, shipSelectButton;
     private int shipCount; // form 0-9
-
-    //String[] shipDetail;
+    private TextView shipNo;
+    private String[] shipName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class ChooseShip extends AppCompatActivity {
 
     private void changePicButton() {
 
+        shipCount = 1;
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,11 +50,13 @@ public class ChooseShip extends AppCompatActivity {
                 if (shipCount<10) {
 
                     shipView.setImageResource(shipImages[shipCount]);
+                    shipNo.setText(shipName[shipCount]);
 
                 } else if (shipCount == 10) {
 
                     shipCount = 0;
                     shipView.setImageResource(shipImages[shipCount]);
+                    shipNo.setText(shipName[shipCount]);
 
                 }
 
@@ -75,11 +79,13 @@ public class ChooseShip extends AppCompatActivity {
                 if (shipCount>=0) {
 
                     shipView.setImageResource(shipImages[shipCount]);
+                    shipNo.setText(shipName[shipCount]);
 
                 } else if (shipCount == -1) {
 
                     shipCount = 9;
                     shipView.setImageResource(shipImages[shipCount]);
+                    shipNo.setText(shipName[shipCount]);
 
                 }
 
@@ -126,6 +132,8 @@ public class ChooseShip extends AppCompatActivity {
 
         };
 
+        shipName = res.getStringArray(R.array.Titles);
+
     }
 
     private void bindWidget() {
@@ -134,6 +142,7 @@ public class ChooseShip extends AppCompatActivity {
         previousButton = (Button) findViewById(R.id.previousButton);
         nextButton = (Button) findViewById(R.id.nextButton);
         shipSelectButton = (Button) findViewById(R.id.selectShipButton);
+        shipNo = (TextView) findViewById(R.id.shipNameText);
 
     }
 }
