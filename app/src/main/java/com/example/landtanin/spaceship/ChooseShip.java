@@ -110,6 +110,7 @@ public class ChooseShip extends AppCompatActivity {
                 shipSelectButtonMediaPlayer.start();
 
                 Intent objIntent = new Intent(ChooseShip.this, GameControlActivity.class);
+                objIntent.putExtra("userToShow", userName);
                 startActivity(objIntent);
                 finish();
 
