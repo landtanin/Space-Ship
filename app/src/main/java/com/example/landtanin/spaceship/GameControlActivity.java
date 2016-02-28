@@ -5,13 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 
 public class GameControlActivity extends AppCompatActivity {
 
     private ImageButton arrowRight, arrowLeft;
     private String userName;
-    private TextView userShow;
+    //private TextView userShow;
     private ImageView userShip;
     private int[] shipImages;
     private int shipCount;
@@ -32,7 +32,10 @@ public class GameControlActivity extends AppCompatActivity {
 
         String showString = "PILOT : " + userName;
 
-        userShow.setText(showString);
+        setTitle(showString); // show String Text in Action Bar
+        //getActionBar().setIcon(R.drawable.ship1);
+
+        //userShow.setText(showString);
 
         shipImages = new int[]{
 
@@ -76,8 +79,10 @@ public class GameControlActivity extends AppCompatActivity {
 
         arrowLeft = (ImageButton) findViewById(R.id.buttonLeft);
         arrowRight = (ImageButton) findViewById(R.id.buttonRight);
-        userShow = (TextView) findViewById(R.id.userShow);
+        //userShow = (TextView) findViewById(R.id.userShow);
         userShip = (ImageView) findViewById(R.id.userShip);
 
     }
+
+
 }

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/space_bg7">
+    android:background="@drawable/space_bg7"
+    android:id="@+id/gameControl"
+    app:showAsAction="always|withText">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -13,15 +17,6 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="UserName"
-                android:id="@+id/userShow"
-                android:layout_gravity="left|top"
-                android:textColor="#d20000"
-                android:textSize="20dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
