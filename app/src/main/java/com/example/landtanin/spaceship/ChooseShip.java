@@ -18,6 +18,7 @@ public class ChooseShip extends AppCompatActivity {
     private int shipCount; // form 0-9
     private TextView shipNo;
     private String[] shipName;
+    private String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,9 @@ public class ChooseShip extends AppCompatActivity {
     private void changePicButton() {
 
         shipCount = 1;
+
+        userName = getIntent().getExtras().getString("user");
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

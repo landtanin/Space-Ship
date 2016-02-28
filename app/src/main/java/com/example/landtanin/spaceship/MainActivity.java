@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText playerName;
     private Button joinButton;
+    private String pilotName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
 
+                    pilotName = playerName.getText().toString().trim();
                     IntentToGameControl();
 
                 }
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
     private void IntentToGameControl() {
 
         Intent objIntent = new Intent(MainActivity.this, ChooseShip.class);
+        objIntent.putExtra("user", pilotName);
         startActivity(objIntent);
         finish();
 
