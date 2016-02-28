@@ -13,7 +13,7 @@ public class ChooseShip extends AppCompatActivity {
     int[] shipImages;
     private ImageView shipView;
     private Button previousButton, nextButton, shipSelectButton;
-    private int shipCount = 0; // form 0-9
+    private int shipCount; // form 0-9
 
     //String[] shipDetail;
 
@@ -41,16 +41,17 @@ public class ChooseShip extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (shipCount < 10) {
+                if (shipCount<10) {
 
                     shipView.setImageResource(shipImages[shipCount]);
 
-                } else {
+                } else if (shipCount == 10) {
 
                     shipCount = 0;
                     shipView.setImageResource(shipImages[shipCount]);
 
                 }
+
 
                 shipCount++;
 
@@ -68,7 +69,7 @@ public class ChooseShip extends AppCompatActivity {
 
                     shipView.setImageResource(shipImages[shipCount]);
 
-                } else {
+                } else if (shipCount == -1) {
 
                     shipCount = 9;
                     shipView.setImageResource(shipImages[shipCount]);
