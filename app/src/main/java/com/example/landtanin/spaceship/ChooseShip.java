@@ -111,6 +111,7 @@ public class ChooseShip extends AppCompatActivity {
 
                 Intent objIntent = new Intent(ChooseShip.this, GameControlActivity.class);
                 objIntent.putExtra("userToShow", userName);
+                objIntent.putExtra("shipCount", shipCount);
                 startActivity(objIntent);
                 finish();
 
@@ -123,7 +124,7 @@ public class ChooseShip extends AppCompatActivity {
 
     }
 
-    private void resources() {
+    public void resources() {
 
         Resources res = getResources();
 
