@@ -59,6 +59,12 @@ public class GameControlActivity extends AppCompatActivity {
 
                 // Move space ship to left
 
+                // check gameOverActivity
+                //Intent objIntent = new Intent(GameControlActivity.this, gameOverActivity.class);
+
+                //startActivity(objIntent);
+                //finish();
+
 
             }
         });
