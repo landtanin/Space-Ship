@@ -13,7 +13,7 @@ public class ChooseShip extends AppCompatActivity {
     int[] shipImages;
     private ImageView shipView;
     private Button previousButton, nextButton, shipSelectButton;
-    private int shipCount; // form 0-9
+    private int shipCount = 0; // form 0-9
 
     //String[] shipDetail;
 
