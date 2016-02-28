@@ -1,22 +1,20 @@
 package com.example.landtanin.spaceship;
 
-import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
 
 public class ChooseShip extends AppCompatActivity {
 
-    private ListView shipListView;
-    String[] shipName;
     int[] shipImages;
+    private ImageView shipView;
+    private Button previousButton, nextButton, shipSelectButton;
+    private int shipCount; // form 0-9
+
     //String[] shipDetail;
 
     @Override
@@ -29,17 +27,83 @@ public class ChooseShip extends AppCompatActivity {
 
         resources();
 
+        changePicButton();
 
 
-        myAdapter adapter = new myAdapter(this, shipName, shipImages);
-        shipListView.setAdapter(adapter);
+        //myAdapter adapter = new myAdapter(this, shipName, shipImages);
+        //shipListView.setAdapter(adapter);
+
+    }
+
+    private void changePicButton() {
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (shipCount < 10) {
+
+                    shipView.setImageResource(shipImages[shipCount]);
+
+                } else {
+
+                    shipCount = 0;
+                    shipView.setImageResource(shipImages[shipCount]);
+
+                }
+
+                shipCount++;
+
+            }
+
+
+
+        });
+
+        previousButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (shipCount>=0) {
+
+                    shipView.setImageResource(shipImages[shipCount]);
+
+                } else {
+
+                    shipCount = 9;
+                    shipView.setImageResource(shipImages[shipCount]);
+
+                }
+
+                shipCount--;
+
+
+            }
+
+
+
+        });
+
+        shipSelectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent objIntent = new Intent(ChooseShip.this, GameControlActivity.class);
+                startActivity(objIntent);
+                finish();
+
+            }
+
+
+
+        });
+
 
     }
 
     private void resources() {
 
         Resources res = getResources();
-        shipName = res.getStringArray(R.array.Titles);
 
         shipImages = new int[]{
 
@@ -55,10 +119,16 @@ public class ChooseShip extends AppCompatActivity {
 
     private void bindWidget() {
 
-        shipListView = (ListView) findViewById(R.id.shiplistView);
+        shipView = (ImageView) findViewById(R.id.shipView);
+        previousButton = (Button) findViewById(R.id.previousButton);
+        nextButton = (Button) findViewById(R.id.nextButton);
+        shipSelectButton = (Button) findViewById(R.id.selectShipButton);
+
     }
 }
 
+
+/*
 class myAdapter extends ArrayAdapter<String> {
 
     Context context;
@@ -76,17 +146,23 @@ class myAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.single_row, parent, false);
-        ImageView myImage = (ImageView) row.findViewById(R.id.imageView);
-        TextView myTitle = (TextView) row.findViewById(R.id.textView);
 
-        myImage.setImageResource(images[position]);
-        myTitle.setText(titleArray[position]);
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View row = inflater.inflate(R.layout.single_row, parent, false);
+            ImageView myImage = (ImageView) row.findViewById(R.id.imageView);
+            TextView myTitle = (TextView) row.findViewById(R.id.textView);
 
-        return row;
-
-    }
+            myImage.setImageResource(images[position]);
+            myTitle.setText(titleArray[position]);
 
 
+
+            return row;
+        }
 }
+*/
+
+
+
+
+

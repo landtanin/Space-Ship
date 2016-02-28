@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GameControlActivity" />
-        <activity android:name=".ChooseShip"></activity>
+        <activity android:name=".ChooseShip" />
     </application>
 
 </manifest>

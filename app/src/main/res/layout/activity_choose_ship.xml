@@ -24,10 +24,44 @@
             android:textSize="40dp"
             android:textColor="#ffffff" />
 
-        <ListView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/shipView"
+            android:layout_weight="0.4" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Previous"
+                android:id="@+id/previousButton"
+                android:layout_weight="0.5"
+                android:layout_gravity="bottom"
+                android:textSize="25dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:id="@+id/nextButton"
+                android:layout_weight="0.5"
+                android:layout_gravity="bottom"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/shiplistView" />
+            android:text="LET&apos;S GO!"
+            android:id="@+id/selectShipButton"
+            android:textSize="25dp" />
 
     </LinearLayout>
 </RelativeLayout>
