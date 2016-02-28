@@ -2,6 +2,7 @@ package com.example.landtanin.spaceship;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -41,6 +42,9 @@ public class ChooseShip extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
+                joinButtonMediaPlayer.start();
+
                 if (shipCount<10) {
 
                     shipView.setImageResource(shipImages[shipCount]);
@@ -65,6 +69,9 @@ public class ChooseShip extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
+                joinButtonMediaPlayer.start();
+
                 if (shipCount>=0) {
 
                     shipView.setImageResource(shipImages[shipCount]);
@@ -88,6 +95,9 @@ public class ChooseShip extends AppCompatActivity {
         shipSelectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                MediaPlayer joinButtonMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.phonton1);
+                joinButtonMediaPlayer.start();
 
                 Intent objIntent = new Intent(ChooseShip.this, GameControlActivity.class);
                 startActivity(objIntent);

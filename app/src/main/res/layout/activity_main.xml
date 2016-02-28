@@ -46,7 +46,6 @@
             android:id="@+id/joinButton"
             android:layout_gravity="center_horizontal"
             android:layout_margin="30dp"
-            android:textSize="30dp"
-            android:background="#41fafff8" />
+            android:textSize="30dp" />
     </LinearLayout>
 </RelativeLayout>

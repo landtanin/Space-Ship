@@ -21,14 +21,15 @@
             android:text="CHOOSE YOUR SHIP"
             android:id="@+id/chooseShipText"
             android:layout_gravity="center_horizontal"
-            android:textSize="40dp"
-            android:textColor="#ffffff" />
+            android:textSize="35dp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="20dp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/shipView"
-            android:layout_weight="0.4"
+            android:layout_weight="0.2"
             android:src="@drawable/ship1" />
 
         <LinearLayout
